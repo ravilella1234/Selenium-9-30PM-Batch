@@ -9,6 +9,7 @@ public class TC_002 extends BaseTest
 		
 		navigate("https://www.bestbuy.com");
 
+		
 	}
 
 }
