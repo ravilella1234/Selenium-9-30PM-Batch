@@ -3,7 +3,9 @@ package com.browsers;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -11,11 +13,13 @@ import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
+import org.openqa.selenium.support.ui.Select;
 
 public class BaseTest 
 {
 	public static WebDriver driver;
 	public static Properties p;
+	public static Properties or;
 	public static FileInputStream fis;
 	
 	public static void init() throws Exception
@@ -23,6 +27,11 @@ public class BaseTest
 		p=new Properties();
 		fis=new FileInputStream(System.getProperty("user.dir")+"//data.properties");
 		p.load(fis);
+		
+		or=new Properties();
+		fis=new FileInputStream(System.getProperty("user.dir")+"//OR.properties");
+		or.load(fis);
+		
 	}
 	
 	public static void launch(String browserKey)
@@ -42,14 +51,38 @@ public class BaseTest
 			//System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"//drivers//MicrosoftWebDriver.exe" );
 			System.setProperty(EdgeDriverService.EDGE_DRIVER_EXE_PROPERTY,System.getProperty("user.dir")+"//drivers//MicrosoftWebDriver.exe" );
 			driver=new EdgeDriver();
+			
+			
 		}
 		
 	}
 	
 	public static void navigate(String urlKey) 
 	{
-		//driver.get(p.getProperty(urlKey));
-		driver.navigate().to(p.getProperty(urlKey));
+		driver.get(p.getProperty(urlKey));
+		driver.manage().window().maximize();
+		//driver.navigate().to(p.getProperty(urlKey));
 	}
+	
+	
+	public static void selectOption(String locatorKey, int item) 
+	{
+		WebElement loc = driver.findElement(By.id(or.getProperty(locatorKey)));
+		Select s=new Select(loc);
+		s.selectByIndex(item);	
+	}
+	
+	
+	public static void type(String locatorKey, String value) 
+	{
+		driver.findElement(By.name(or.getProperty(locatorKey))).sendKeys(value);
+	}
+	
+	
+	public static void click(String locatorKey) 
+	{
+		driver.findElement(By.xpath(or.getProperty(locatorKey))).click();
+	}
+
 
 }
