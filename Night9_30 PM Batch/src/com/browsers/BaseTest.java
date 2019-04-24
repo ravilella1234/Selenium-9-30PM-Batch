@@ -3,6 +3,7 @@ package com.browsers;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,6 +32,8 @@ public class BaseTest
 		or=new Properties();
 		fis=new FileInputStream(System.getProperty("user.dir")+"//OR.properties");
 		or.load(fis);
+		
+		PropertyConfigurator.configure(System.getProperty("user.dir")+"//log4j.properties");
 		
 	}
 	
@@ -65,9 +68,29 @@ public class BaseTest
 	}
 	
 	
+	public static WebElement getElement(String locatorKey)
+	{
+		WebElement element=null;
+		
+		if(locatorKey.endsWith("_id")) {
+			element=driver.findElement(By.id(or.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_name")) {
+			element=driver.findElement(By.name(or.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_class")) {
+			element=driver.findElement(By.className(or.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_xpath")) {
+			element=driver.findElement(By.xpath(or.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_css")) {
+			element=driver.findElement(By.cssSelector(or.getProperty(locatorKey)));
+		}
+		return element;
+		
+	}
+	
+	
 	public static void selectOption(String locatorKey, int item) 
 	{
-		WebElement loc = driver.findElement(By.id(or.getProperty(locatorKey)));
+		WebElement loc = getElement(locatorKey);
 		Select s=new Select(loc);
 		s.selectByIndex(item);	
 	}
@@ -75,13 +98,13 @@ public class BaseTest
 	
 	public static void type(String locatorKey, String value) 
 	{
-		driver.findElement(By.name(or.getProperty(locatorKey))).sendKeys(value);
+		getElement(locatorKey).sendKeys(value);
 	}
 	
 	
 	public static void click(String locatorKey) 
 	{
-		driver.findElement(By.xpath(or.getProperty(locatorKey))).click();
+		getElement(locatorKey).click();
 	}
 
 
