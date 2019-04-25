@@ -10,3 +10,21 @@ Navigate to url :- https://www.amazon.in
 Selected the option 10 By using the locator :- searchDropdownBox
 Entered the text Harry Potter By using locator :- field-keywords
 Clicked on Amazon button By using locator :- //div[@class='nav-search-submit nav-sprite']//input[@class='nav-input']
+Initialising data & or & log4j properties.....
+Opened the browser :- chrome
+Navigate to url :- https://www.amazon.in
+Selected the option 10 By using the locator :- searchDropdownBox
+Entered the text Harry Potter By using locator :- field-keywords
+Clicked on Amazon button By using locator :- //div[@class='nav-search-submit nav-sprite']//input[@class='nav-input']
+Initialising data & or & log4j properties.....
+Opened the browser :- chrome
+Navigate to url :- https://www.amazon.in
+Selected the option 10 By using the locator :- searchDropdownBox
+Entered the text Harry Potter By using locator :- field-keywords
+Clicked on Amazon button By using locator :- //div[@class='nav-search-submit nav-sprite']//input[@class='nav-input']
+Initialising data & or & log4j properties.....
+Opened the browser :- chrome
+Navigate to url :- https://www.amazon.in
+Selected the option 10 By using the locator :- searchDropdownBox
+Entered the text Harry Potter By using locator :- field-keywords
+Clicked on Amazon button By using locator :- //div[@class='nav-search-submit nav-sprite']//input[@class='nav-input']
