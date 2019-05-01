@@ -1,10 +1,15 @@
 package com.browsers;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Date;
 import java.util.Properties;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,10 +19,12 @@ import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.Select;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 public class BaseTest 
 {
@@ -89,6 +96,10 @@ public class BaseTest
 			element=driver.findElement(By.xpath(or.getProperty(locatorKey)));
 		}else if(locatorKey.endsWith("_css")) {
 			element=driver.findElement(By.cssSelector(or.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_linktext")) {
+			element=driver.findElement(By.linkText(or.getProperty(locatorKey)));
+		}else if(locatorKey.endsWith("_partiallink")) {
+			element=driver.findElement(By.partialLinkText(or.getProperty(locatorKey)));
 		}
 		return element;
 		
@@ -113,6 +124,63 @@ public class BaseTest
 	{
 		getElement(locatorKey).click();
 	}
+	
+	
+	//***********************************Verifications***********************************
 
+	public static boolean verifyTitle(String expectedTitle)
+	{
+		String actulTitle = driver.getTitle();
+	
+		if(actulTitle.equals(or.getProperty(expectedTitle)))
+			return true;
+		else 
+			return false;
+	}
+	
+	
+	public static boolean verifyText(String locatorKey, String expectedText) 
+	{
+		String actualText = getElement(locatorKey).getText();
+		
+		if(actualText.equals(or.getProperty(expectedText)))
+			return true;
+		else
+			return false;
+		
+	}
+	
+	
+	//************************************Reporting**********************************
+	
+	public static void reportPass(String msg) 
+	{
+		test.log(LogStatus.PASS, msg);
+		
+	}
+
+	public static void reportFailure(String msg) 
+	{
+		test.log(LogStatus.FAIL, msg);
+		takeScreenShot();
+		
+	}
+
+	public static void takeScreenShot() 
+	{
+		Date dt=new Date();
+		String screenshotFileName = dt.toString().replace(":", "_").replace(" ", "_")+".png";
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		try 
+		{
+			FileHandler.copy(scrFile, new File(System.getProperty("user.dir")+"//failure//"+screenshotFileName));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		//put screen shot file in extent reports
+		test.log(LogStatus.INFO, "Screenshot --> "+ test.addScreenCapture(System.getProperty("user.dir")+"//failure//"+screenshotFileName));
+		
+	}
 
 }
