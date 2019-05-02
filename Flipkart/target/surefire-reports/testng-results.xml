@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="com.project.Flipkart.AppTest" duration-ms="20" started-at="2019-05-02T16:32:14Z" finished-at="2019-05-02T16:32:14Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="20" started-at="2019-05-02T16:32:14Z" finished-at="2019-05-02T16:32:14Z">
+    </test> <!-- Command line test -->
+  </suite> <!-- com.project.Flipkart.AppTest -->
+</testng-results>
