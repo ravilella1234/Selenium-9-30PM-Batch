@@ -182,5 +182,10 @@ public class BaseTest
 		test.log(LogStatus.INFO, "Screenshot --> "+ test.addScreenCapture(System.getProperty("user.dir")+"//failure//"+screenshotFileName));
 		
 	}
+	
+	public static void browserClose() 
+	{
+		driver.quit();
+	}
 
 }

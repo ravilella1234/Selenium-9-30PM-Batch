@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+    <line>
+      <![CDATA[Clicked on Image Link]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="77852" started-at="2019-05-15T16:51:13Z" finished-at="2019-05-15T16:52:31Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="77852" started-at="2019-05-15T16:51:13Z" finished-at="2019-05-15T16:52:31Z">
+      <class name="com.project.Flipkart.TC_001">
+        <test-method status="PASS" signature="startUp()[pri:0, instance:com.project.Flipkart.TC_001@1500955a]" name="startUp" is-config="true" duration-ms="20333" started-at="2019-05-15T16:51:35Z" finished-at="2019-05-15T16:51:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method status="PASS" signature="launch()[pri:0, instance:com.project.Flipkart.TC_001@1500955a]" name="launch" duration-ms="7417" started-at="2019-05-15T16:51:56Z" finished-at="2019-05-15T16:52:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method status="PASS" signature="endProcess()[pri:0, instance:com.project.Flipkart.TC_001@1500955a]" name="endProcess" is-config="true" duration-ms="999" started-at="2019-05-15T16:52:03Z" finished-at="2019-05-15T16:52:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+      </class> <!-- com.project.Flipkart.TC_001 -->
+      <class name="com.project.Flipkart.LinksTesting1">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.project.Flipkart.LinksTesting1@e874448]" name="setup" is-config="true" duration-ms="9810" started-at="2019-05-15T16:52:04Z" finished-at="2019-05-15T16:52:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="linktesting1()[pri:0, instance:com.project.Flipkart.LinksTesting1@e874448]" name="linktesting1" duration-ms="1854" started-at="2019-05-15T16:52:14Z" finished-at="2019-05-15T16:52:16Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Clicked on Image Link]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- linktesting1 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.project.Flipkart.LinksTesting1@e874448]" name="tearDown" is-config="true" duration-ms="1068" started-at="2019-05-15T16:52:16Z" finished-at="2019-05-15T16:52:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.project.Flipkart.LinksTesting1 -->
+      <class name="com.project.Flipkart.CheckBox1">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.project.Flipkart.CheckBox1@7ce6a65d]" name="beforeMethod" is-config="true" duration-ms="20292" started-at="2019-05-15T16:51:14Z" finished-at="2019-05-15T16:51:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="checkboxTest()[pri:0, instance:com.project.Flipkart.CheckBox1@7ce6a65d]" name="checkboxTest" duration-ms="215" started-at="2019-05-15T16:51:34Z" finished-at="2019-05-15T16:51:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkboxTest -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.project.Flipkart.CheckBox1@7ce6a65d]" name="afterMethod" is-config="true" duration-ms="1212" started-at="2019-05-15T16:51:34Z" finished-at="2019-05-15T16:51:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.project.Flipkart.CheckBox1 -->
+      <class name="com.project.Flipkart.RadioButton1">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.project.Flipkart.RadioButton1@29b5cd00]" name="beforeMethod" is-config="true" duration-ms="12846" started-at="2019-05-15T16:52:17Z" finished-at="2019-05-15T16:52:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="RadioButtonTest()[pri:0, instance:com.project.Flipkart.RadioButton1@29b5cd00]" name="RadioButtonTest" duration-ms="281" started-at="2019-05-15T16:52:30Z" finished-at="2019-05-15T16:52:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RadioButtonTest -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.project.Flipkart.RadioButton1@29b5cd00]" name="afterMethod" is-config="true" duration-ms="1399" started-at="2019-05-15T16:52:30Z" finished-at="2019-05-15T16:52:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.project.Flipkart.RadioButton1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
