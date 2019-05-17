@@ -2,22 +2,24 @@ package com.project.Flipkart;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class TC_001 extends BaseTest
 {
   
   
-  @BeforeMethod
-  public void startUp() throws Exception 
+  @BeforeMethod(groups= {"regression"})
+  @Parameters("browser")
+  public void startUp(String btype) throws Exception 
   {
 	  init();
-	  launch("chromebrowser");
+	  launch(btype);
 	  navigate("amazonurl");
   }
   
   
-  @Test
+  @Test(groups= {"regression"})
   public void launch() 
   {
 	  selectOption("amazonsearchdropbox_id",10);
@@ -26,7 +28,7 @@ public class TC_001 extends BaseTest
   }
   
 
-  @AfterMethod
+  @AfterMethod(groups= {"regression"})
   public void endProcess() 
   {
 	  browserClose();

@@ -6,22 +6,24 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class RadioButton1 extends BaseTest 
 {
 
 	
-	@BeforeMethod
-	  public void beforeMethod() throws Exception 
+	@BeforeMethod(groups= {"regression","smoke"})
+	@Parameters("browser")
+	  public void beforeMethod(String btype) throws Exception 
 	  {
 		init();
-		launch("chromebrowser");
+		launch(btype);
 		navigate("radiobuttonurl");
 	  }
 	
 	
-	@Test
+	@Test(groups= {"regression","smoke"})
 	public void RadioButtonTest()
 	{
 		WebElement radio=driver.findElement(By.xpath("(//td[@class='table5'])[2]"));
@@ -33,7 +35,7 @@ public class RadioButton1 extends BaseTest
 	}
  
 
-  @AfterMethod
+  @AfterMethod(groups= {"regression","smoke"})
   public void afterMethod() 
   {
 	  browserClose();

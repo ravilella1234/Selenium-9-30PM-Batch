@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="MySuite">
+
+	<groups>
+		<run>
+			<include name="smoke"></include>
+		</run>
+	</groups>
+
   <test thread-count="5" name="ChromeTest">
+  <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="com.project.Flipkart.RadioButton1"/>
       <class name="com.project.Flipkart.CheckBox1"/>
@@ -9,24 +17,5 @@
       <class name="com.project.Flipkart.LinksTesting1"/>
     </classes>
   </test> <!-- MyTest -->
-  
-  <test thread-count="5" name="FirefoxTest">
-    <classes>
-      <class name="com.project.Flipkart.RadioButton1"/>
-      <class name="com.project.Flipkart.CheckBox1"/>
-      <class name="com.project.Flipkart.TC_001"/>
-      <class name="com.project.Flipkart.LinksTesting1"/>
-    </classes>
-  </test> <!-- MyTest -->
-  
-  
-  <test thread-count="5" name="IETest">
-    <classes>
-      <class name="com.project.Flipkart.RadioButton1"/>
-      <class name="com.project.Flipkart.CheckBox1"/>
-      <class name="com.project.Flipkart.TC_001"/>
-      <class name="com.project.Flipkart.LinksTesting1"/>
-    </classes>
-  </test> <!-- MyTest -->
-  
+   
 </suite> <!-- MySuite -->

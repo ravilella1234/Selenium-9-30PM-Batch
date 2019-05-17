@@ -6,21 +6,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class CheckBox1 extends BaseTest 
 {
   
-	@BeforeMethod
-	  public void beforeMethod() throws Exception 
+	@BeforeMethod(groups= {"regression","smoke"})
+	@Parameters("browser")
+	  public void beforeMethod(String btype) throws Exception 
 	  {
 			init();
-			launch("chromebrowser");
+			launch(btype);
 			navigate("checkboxurl");
 	  }
 	  
 	  
-	@Test
+	@Test(groups= {"regression","smoke"})
 	public void checkboxTest()
 	{
 		List<WebElement> check=driver.findElements(By.xpath("//td[@class='table5']/input[@type='checkbox']"));
@@ -32,7 +34,7 @@ public class CheckBox1 extends BaseTest
 	}
  
 
-  @AfterMethod
+  @AfterMethod(groups= {"regression","smoke"})
   public void afterMethod() 
   {
 	  browserClose();

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Smoke suite">
-  <test thread-count="5" verbose="2" name="Smoke test">
+<suite guice-stage="DEVELOPMENT" name="Smoke suite" parallel="tests">
+
+  <test thread-count="5" verbose="2" name="Chrometest">
+  <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="com.project.Flipkart.CheckBox1"/>
-      <class name="com.project.Flipkart.TC_001"/>
-      <class name="com.project.Flipkart.LinksTesting1"/>
-      <class name="com.project.Flipkart.RadioButton1"/>
+      
     </classes>
   </test> <!-- Default test -->
+  
+  <test thread-count="5" verbose="2" name="IEtest">
+  <parameter name="browser" value="ie"></parameter>
+    <classes>
+      <class name="com.project.Flipkart.CheckBox1"/>
+      
+    </classes>
+  </test> <!-- Default test -->
+  
 </suite> <!-- Default suite -->

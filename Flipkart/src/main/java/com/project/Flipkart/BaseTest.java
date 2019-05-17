@@ -53,18 +53,18 @@ public class BaseTest
 	
 	public static void launch(String browserKey)
 	{
-		if(p.getProperty(browserKey).equals("chrome")) {
+		if(browserKey.equals("chrome")) {
 			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir")+"//drivers//chromedriver.exe");
 			driver=new ChromeDriver();
-		}else if(p.getProperty(browserKey).equals("firefox")) {
+		}else if(browserKey.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"//drivers//geckodriver.exe");
 			driver=new FirefoxDriver();
-		}else if(p.getProperty(browserKey).equals("ie")) {
+		}else if(browserKey.equals("ie")) {
 			//System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"//drivers//IEDriverServer.exe");
 			System.setProperty(InternetExplorerDriverService.IE_DRIVER_EXE_PROPERTY, System.getProperty("user.dir")+"//drivers//IEDriverServer.exe");
 			driver=new InternetExplorerDriver();
-		}else if(p.getProperty(browserKey).equals("edge")) {
+		}else if(browserKey.equals("edge")) {
 			//System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"//drivers//MicrosoftWebDriver.exe" );
 			System.setProperty(EdgeDriverService.EDGE_DRIVER_EXE_PROPERTY,System.getProperty("user.dir")+"//drivers//MicrosoftWebDriver.exe" );
 			driver=new EdgeDriver();
