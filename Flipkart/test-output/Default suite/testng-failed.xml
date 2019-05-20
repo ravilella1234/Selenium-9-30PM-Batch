@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.Flipkart.CheckBox1">
+      <class name="com.project.Flipkart.Dependency">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="checkboxTest"/>
-          <include name="afterMethod"/>
+          <include name="blue"/>
+          <include name="orange"/>
+          <include name="green"/>
+          <include name="white"/>
         </methods>
-      </class> <!-- com.project.Flipkart.CheckBox1 -->
+      </class> <!-- com.project.Flipkart.Dependency -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

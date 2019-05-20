@@ -1,61 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="MySuite" duration-ms="32232" started-at="2019-05-17T16:51:39Z" finished-at="2019-05-17T16:52:11Z">
+  <suite name="super" duration-ms="0" started-at="2019-05-20T16:38:14Z" finished-at="2019-05-20T16:38:14Z">
     <groups>
-      <group name="regression">
-        <method signature="CheckBox1.checkboxTest()[pri:0, instance:com.project.Flipkart.CheckBox1@cb51256]" name="checkboxTest" class="com.project.Flipkart.CheckBox1"/>
-        <method signature="RadioButton1.RadioButtonTest()[pri:0, instance:com.project.Flipkart.RadioButton1@6043cd28]" name="RadioButtonTest" class="com.project.Flipkart.RadioButton1"/>
-      </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="CheckBox1.checkboxTest()[pri:0, instance:com.project.Flipkart.CheckBox1@cb51256]" name="checkboxTest" class="com.project.Flipkart.CheckBox1"/>
-        <method signature="RadioButton1.RadioButtonTest()[pri:0, instance:com.project.Flipkart.RadioButton1@6043cd28]" name="RadioButtonTest" class="com.project.Flipkart.RadioButton1"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="ChromeTest" duration-ms="32232" started-at="2019-05-17T16:51:39Z" finished-at="2019-05-17T16:52:11Z">
-      <class name="com.project.Flipkart.CheckBox1">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:com.project.Flipkart.CheckBox1@cb51256]" name="beforeMethod" is-config="true" duration-ms="14739" started-at="2019-05-17T16:51:55Z" finished-at="2019-05-17T16:52:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+  </suite> <!-- super -->
+  <suite name="SuiteD" duration-ms="15098" started-at="2019-05-20T16:37:58Z" finished-at="2019-05-20T16:38:14Z">
+    <groups>
+    </groups>
+    <test name="TestD" duration-ms="15098" started-at="2019-05-20T16:37:58Z" finished-at="2019-05-20T16:38:14Z">
+      <class name="suiteD.TestD3">
+        <test-method status="PASS" signature="testD3()[pri:0, instance:suiteD.TestD3@50cbc42f]" name="testD3" duration-ms="5000" started-at="2019-05-20T16:38:09Z" finished-at="2019-05-20T16:38:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="checkboxTest()[pri:0, instance:com.project.Flipkart.CheckBox1@cb51256]" name="checkboxTest" duration-ms="612" started-at="2019-05-17T16:52:09Z" finished-at="2019-05-17T16:52:10Z">
+        </test-method> <!-- testD3 -->
+      </class> <!-- suiteD.TestD3 -->
+      <class name="suiteD.TestD2">
+        <test-method status="PASS" signature="testD2()[pri:0, instance:suiteD.TestD2@1c53fd30]" name="testD2" duration-ms="5001" started-at="2019-05-20T16:38:04Z" finished-at="2019-05-20T16:38:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkboxTest -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.project.Flipkart.CheckBox1@cb51256]" name="afterMethod" is-config="true" duration-ms="1617" started-at="2019-05-17T16:52:10Z" finished-at="2019-05-17T16:52:11Z">
+        </test-method> <!-- testD2 -->
+      </class> <!-- suiteD.TestD2 -->
+      <class name="suiteD.TestD1">
+        <test-method status="PASS" signature="testD1()[pri:0, instance:suiteD.TestD1@5f150435]" name="testD1" duration-ms="5020" started-at="2019-05-20T16:37:58Z" finished-at="2019-05-20T16:38:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.project.Flipkart.CheckBox1 -->
-      <class name="com.project.Flipkart.RadioButton1">
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:com.project.Flipkart.RadioButton1@6043cd28]" name="beforeMethod" is-config="true" duration-ms="13546" started-at="2019-05-17T16:51:39Z" finished-at="2019-05-17T16:51:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- testD1 -->
+      </class> <!-- suiteD.TestD1 -->
+    </test> <!-- TestD -->
+  </suite> <!-- SuiteD -->
+  <suite name="SuiteC" duration-ms="15094" started-at="2019-05-20T16:37:58Z" finished-at="2019-05-20T16:38:14Z">
+    <groups>
+    </groups>
+    <test name="TestC" duration-ms="15094" started-at="2019-05-20T16:37:58Z" finished-at="2019-05-20T16:38:14Z">
+      <class name="suiteC.TestC1">
+        <test-method status="PASS" signature="testC1()[pri:0, instance:suiteC.TestC1@33e5ccce]" name="testC1" duration-ms="5000" started-at="2019-05-20T16:38:09Z" finished-at="2019-05-20T16:38:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="RadioButtonTest()[pri:0, instance:com.project.Flipkart.RadioButton1@6043cd28]" name="RadioButtonTest" duration-ms="422" started-at="2019-05-17T16:51:53Z" finished-at="2019-05-17T16:51:53Z">
+        </test-method> <!-- testC1 -->
+      </class> <!-- suiteC.TestC1 -->
+      <class name="suiteC.TestC2">
+        <test-method status="PASS" signature="testC2()[pri:0, instance:suiteC.TestC2@18e8568]" name="testC2" duration-ms="5001" started-at="2019-05-20T16:38:04Z" finished-at="2019-05-20T16:38:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RadioButtonTest -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.project.Flipkart.RadioButton1@6043cd28]" name="afterMethod" is-config="true" duration-ms="1206" started-at="2019-05-17T16:51:53Z" finished-at="2019-05-17T16:51:55Z">
+        </test-method> <!-- testC2 -->
+      </class> <!-- suiteC.TestC2 -->
+      <class name="suiteC.TestC3">
+        <test-method status="PASS" signature="testC3()[pri:0, instance:suiteC.TestC3@1c2c22f3]" name="testC3" duration-ms="5019" started-at="2019-05-20T16:37:58Z" finished-at="2019-05-20T16:38:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.project.Flipkart.RadioButton1 -->
-    </test> <!-- ChromeTest -->
-  </suite> <!-- MySuite -->
+        </test-method> <!-- testC3 -->
+      </class> <!-- suiteC.TestC3 -->
+    </test> <!-- TestC -->
+  </suite> <!-- SuiteC -->
 </testng-results>
